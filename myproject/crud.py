@@ -86,6 +86,7 @@ def update_director(db: Session, director_id: int, director: schemas.DirectorCre
         return None
     db_director.firstName = director.firstName
     db_director.lastName = director.lastName
+    db_director.gender = director.gender
     db.commit()
     db.refresh(db_director)
     return db_director
@@ -109,7 +110,7 @@ def update_genre(db: Session, genre_id: int, genre: schemas.GenreCreate):
     db_genre = db.query(models.Genre).filter(models.Genre.genreID == genre_id).first()
     if db_genre is None:
         return None
-    db_genre.name = genre.genre
+    db_genre.genre = genre.genre
     db.commit()
     db.refresh(db_genre)
     return db_genre
