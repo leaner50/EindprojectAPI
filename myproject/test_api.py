@@ -181,3 +181,39 @@ def test_delete_genres():
     response = requests.delete(f"{BASE_URL}/genres/1", headers={"Authorization": f"Bearer {access_token}"})
     assert response.status_code == 200
     assert "genre" in response.json()
+
+def test_get_users():
+    response = requests.get(f"{BASE_URL}/users", headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
+
+def test_post_users():
+    user_data = {
+        "email": "TestUsername",
+        "password": "TestPassword"
+    }
+    response = requests.post(f"{BASE_URL}/users", json=user_data, headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
+
+def test_get_users_me():
+    response = requests.get(f"{BASE_URL}/users/me", headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
+
+
+def test_get_users_by_id():
+    response = requests.get(f"{BASE_URL}/users/1", headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
+
+
+def test_post_users_items():
+    item_data = {
+  "title": "string",
+  "description": "string"
+}
+    response = requests.post(f"{BASE_URL}/users/1/items", json=item_data, headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
+    assert "id" in response.json()
+    assert "owner_id" in response.json()
+
+def test_get_items():
+    response = requests.get(f"{BASE_URL}/items", headers={"Authorization": f"Bearer {access_token}"})
+    assert response.status_code == 200
