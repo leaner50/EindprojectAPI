@@ -122,8 +122,9 @@ def test_get_directors():
     response = requests.get(f"{BASE_URL}/directors", headers={"Authorization": f"Bearer {access_token}"})
     assert response.status_code == 200
     assert "firstName" in response.json()
-    assert "lastName" in response.json()
     assert "gender" in response.json()
+    assert "lastName" in response.json()
+    
 
 def test_get_directors_by_id():
     response = requests.get(f"{BASE_URL}/directors/1", headers={"Authorization": f"Bearer {access_token}"})
@@ -133,7 +134,7 @@ def test_get_directors_by_id():
     assert "gender" in response.json()
 
 def test_get_directors_by_name():
-    response = requests.get(f"{BASE_URL}/directors/name/Test Director", headers={"Authorization": f"Bearer {access_token}"})
+    response = requests.get(f"{BASE_URL}/directors/name/TestFirstName/TestLastName", headers={"Authorization": f"Bearer {access_token}"})
     assert response.status_code == 200
     assert "firstName" in response.json()
     assert "lastName" in response.json()
