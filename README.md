@@ -64,10 +64,6 @@ Url: https://system-service-leaner50.cloud.okteto.net
 
 ![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_directors_with_id_get.png)
 
-- Screenshot of the API when it is used to display the director with the given name
-
-![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_directors_with_name_get.png)
-
 -Screenshot of the API when it is used to create a new director
 
 ![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_directors_get.png)
@@ -93,11 +89,7 @@ Url: https://system-service-leaner50.cloud.okteto.net
 -Screenshot of the API when it is used to create a new genre
 
 ![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_genre_post.png)
-![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_genre_already_exists.png)
-
-- Screenshot of the API when it is used to update the genre with the given id
-
-![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_genre_with_id_put.png)
+![image](https://github.com/leaner50/EindprojectAPI/blob/main/img/Postman_genre_post_already_exists.png)
 
 ## Screenshot of the API docs:
 Url: https://movies-service-leaner50.cloud.okteto.net/docs
